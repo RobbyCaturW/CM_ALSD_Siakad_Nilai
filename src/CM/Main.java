@@ -56,15 +56,29 @@ public class Main {
                     }
                     break;
                 case 4:
+                System.out.println("Data Penilaian: ");
 
+                for (int i = 0; i < nilai.length-1; i++) {
+                    for (int j = 1; j < nilai.length-i; j++) {
+                        if (nilai[j].hitungNilaiAkhir()>nilai[j-1].hitungNilaiAkhir()) {
+                            Penilaian tmp = nilai [j-1];
+                            nilai[j] = nilai[j-1];
+                            nilai [j-1] = tmp;
+                        }
+                    }
+                }
+                
+                for (Penilaian penilaian : nilai) {
+                    System.out.println(penilaian.nama + " | "  + penilaian.matkul + " | " + penilaian.hitungNilaiAkhir());
+                }
 
                     break;
                 case 5:
                     System.out.print("Masukkan NIM yang ingin dicari: ");
-                    String nim = sc.nextLine();
+                    String CariNim = sc.nextLine();
                     boolean ditemukan = false;
                     for (Mahasiswa mh : mhs) {
-                        if (mh.NIM.equals(nim)) {
+                        if (mh.NIM.equals(CariNim)) {
                             System.out.println("Mahasiswa ditemukan:");
                             mh.tampilMahasiswa();
                             ditemukan = true;
@@ -72,7 +86,7 @@ public class Main {
                         }
                     }
                     if (!ditemukan) {
-                        System.out.println("Tidak ada mahasiswa dengan NIM " + nim);
+                        System.out.println("Tidak ada mahasiswa dengan NIM " + CariNim);
                     }
                     break;
 
