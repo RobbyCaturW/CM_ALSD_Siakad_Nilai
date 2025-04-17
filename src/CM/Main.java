@@ -18,13 +18,13 @@ public class Main {
             new MataKuliah("MK002", "Basis Data", 3),
             new MataKuliah("MK003", "Desain Web", 3)
         };
-
-
-
-
-
-
-
+        Penilaian[] nilai = {
+                new Penilaian("Ali rahman", "Struktur Data", 80, 85, 90),
+                new Penilaian("Ali rahman", "Basis Data", 60, 75, 70),
+                new Penilaian("Budi Santoso", "Struktur Data", 75, 70, 80),
+                new Penilaian("Citra Dewi", "Basis Data", 85, 90, 95),
+                new Penilaian("Citra Dewi", "Desain Web", 80, 90, 65),
+        };
 
         do {
             System.out.println("=== MENU SISTEM AKADEMIK ===");
@@ -40,35 +40,46 @@ public class Main {
 
             switch (pilihan) {
                 case 1:
-                for (Mahasiswa MHS : mhs){
-                    MHS.tampilMahasiswa();
-                }
-                break;
-            
+                    for (Mahasiswa MHS : mhs){
+                        MHS.tampilMahasiswa();
+                    }
+                    break;
                 case 2:
-                for (MataKuliah MK : mk) {
-                    MK.tampilMatakuliah();
-                }
-
+                    for (MataKuliah MK : mk) {
+                        MK.tampilMatakuliah();
+                    }
                     break;
-
                 case 3:
-
-
+                    System.out.println("Data Penilaian Mahasiswa:");
+                    for (Penilaian data : nilai) {
+                        data.tampilData();
+                    }
                     break;
-                
                 case 4:
 
 
                     break;
-
                 case 5:
+                    System.out.print("Masukkan NIM yang ingin dicari: ");
+                    String nim = sc.nextLine();
+                    boolean ditemukan = false;
+                    for (Mahasiswa mh : mhs) {
+                        if (mh.NIM.equals(nim)) {
+                            System.out.println("Mahasiswa ditemukan:");
+                            mh.tampilMahasiswa();
+                            ditemukan = true;
+                            break;
+                        }
+                    }
+                    if (!ditemukan) {
+                        System.out.println("Tidak ada mahasiswa dengan NIM " + nim);
+                    }
+                    break;
 
-
+                default:
+                    System.out.println("Pilihan tidak valid");
                     break;
             }
-
-
-        }while (pilihan != 0);
+        } while (pilihan != 0);
     }
 }
