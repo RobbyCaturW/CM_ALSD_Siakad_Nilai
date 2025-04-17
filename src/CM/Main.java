@@ -89,7 +89,9 @@ public class Main {
                         System.out.println("Tidak ada mahasiswa dengan NIM " + CariNim);
                     }
                     break;
-
+                case 0:
+                    System.out.println("Selesai!");
+                    break;
                 default:
                     System.out.println("Pilihan tidak valid");
                     break;
