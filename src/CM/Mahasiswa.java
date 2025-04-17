@@ -13,6 +13,6 @@ public class Mahasiswa {
     }
 
     public void tampilMahasiswa(){
-        System.out.println("NIM: " + NIM + " | Nama " + nama + " | Prodi " + prodi);
+        System.out.println("NIM: " + NIM + " | Nama: " + nama + " | Prodi: " + prodi);
     }
 }

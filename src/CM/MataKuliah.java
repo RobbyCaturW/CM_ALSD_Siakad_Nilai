@@ -7,7 +7,7 @@ public class MataKuliah {
 
     public MataKuliah(String kodeMK, String namaMK, int sks){
         this.kodeMK=kodeMK;
-        this.namaMK=kodeMK;
+        this.namaMK=namaMK;
         this.sks=sks;
     }
     public void tampilMatakuliah(){

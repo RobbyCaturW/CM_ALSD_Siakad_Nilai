@@ -6,7 +6,7 @@ public class Penilaian {
 
     public Penilaian(String nama, String matkul, double nilaiTugas, double nilaiUTS, double nilaiUAS) {
         this.nama = nama;
-        this.matkul = nama;
+        this.matkul = matkul;
         this.nilaiTugas = nilaiTugas;
         this.nilaiUTS = nilaiUTS;
         this.nilaiUAS = nilaiUAS;

@@ -31,7 +31,7 @@ public class Main {
             System.out.println("1. Tampilkan Daftar Mahasiswa");
             System.out.println("2. Tampilkan Daftar Mata Kuliah");
             System.out.println("3. Tampilkan Data Penilaian");
-            System.out.println("4. Ururtkan Mahasiswa Berdasarkan Nilai Akhir");
+            System.out.println("4. Urutkan Mahasiswa Berdasarkan Nilai Akhir");
             System.out.println("5. Cari Mahasiswa Berdasarkan NIM");
             System.out.println("0. keluar");
             System.out.print("Pilih menu: ");
@@ -50,7 +50,7 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.println("Data Penilaian Mahasiswa:");
+                    System.out.println("Data Penilaian:");
                     for (Penilaian data : nilai) {
                         data.tampilData();
                     }
@@ -69,7 +69,7 @@ public class Main {
                 }
                 
                 for (Penilaian penilaian : nilai) {
-                    System.out.println(penilaian.nama + " | "  + penilaian.matkul + " | " + penilaian.hitungNilaiAkhir());
+                    System.out.println(penilaian.nama + " | "  + penilaian.matkul + " | " + " Nilai Akhir: " + penilaian.hitungNilaiAkhir());
                 }
 
                     break;
@@ -79,7 +79,7 @@ public class Main {
                     boolean ditemukan = false;
                     for (Mahasiswa mh : mhs) {
                         if (mh.NIM.equals(CariNim)) {
-                            System.out.println("Mahasiswa ditemukan:");
+                            System.out.print("Mahasiswa ditemukan: ");
                             mh.tampilMahasiswa();
                             ditemukan = true;
                             break;
