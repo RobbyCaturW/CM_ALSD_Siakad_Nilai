@@ -40,9 +40,10 @@ public class Main {
 
             switch (pilihan) {
                 case 1:
-                    
-
-                    break;
+                for (Mahasiswa MHS : mhs){
+                    MHS.tampilMahasiswa();
+                }
+                break;
             
                 case 2:
 
