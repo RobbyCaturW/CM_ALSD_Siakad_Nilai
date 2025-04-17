@@ -46,7 +46,9 @@ public class Main {
                 break;
             
                 case 2:
-
+                for (MataKuliah MK : mk) {
+                    MK.tampilMatakuliah();
+                }
 
                     break;
 
