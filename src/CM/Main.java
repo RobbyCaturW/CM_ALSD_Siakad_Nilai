@@ -13,6 +13,11 @@ public class Main {
             new Mahasiswa("22003", "Citra Dewi", "Sistem Informasi Bisnis")
 
         };
+        MataKuliah[] mk = {
+            new MataKuliah("MK001", "Struktur Data", 3),
+            new MataKuliah("MK002", "Basis Data", 3),
+            new MataKuliah("MK003", "Desain Web", 3)
+        };
 
 
 
