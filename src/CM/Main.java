@@ -1,4 +1,4 @@
-package semester2.CM_ALSD_Siakad_Nilai.src;
+package CM;
 
 import java.util.Scanner;
 

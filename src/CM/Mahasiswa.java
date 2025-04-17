@@ -1,4 +1,4 @@
-package CM_ALSD_Siakad_Nilai.CM;
+package CM;
 
 public class Mahasiswa {
     
